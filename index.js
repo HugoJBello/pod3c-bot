@@ -24,7 +24,7 @@ bot.onText(/\/info/, (msg, match) => {
     const chatId = msg.chat.id;
 
     // send back the matched "whatever" to the chat
-    bot.sendMessage(chatId, 'Acerca de que quieres que te informe?', {
+    bot.sendMessage(chatId, '¿Acerca de qué quieres que te informe?', {
             reply_markup: {
                 keyboard: [['Hablame del programa'], ['dime cotilleos']]
             }

@@ -20,20 +20,35 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 });
 
 // Matches "/echo [whatever]"
-bot.onText(/\/info (.+)/, (msg, match) => {
+bot.onText(/\/info/, (msg, match) => {
     const chatId = msg.chat.id;
 
     // send back the matched "whatever" to the chat
-    bot.sendMessage(chatId, 'Acerca de que quieres que te informe', {
+    bot.sendMessage(chatId, 'Acerca de que quieres que te informe?', {
             reply_markup: {
-                keyboard: [['Programa'], ['Cotilleos']]
+                keyboard: [['Hablame del programa'], ['dime cotilleos']]
             }
         }
     );
 });
+bot.onText(/\/Hablame del programa/, (msg, match) => {
+    const chatId = msg.chat.id;
+
+    // send back the matched "whatever" to the chat
+    bot.sendMessage(chatId, 'estoy siendo programado y no me pispo mucho');
+
+});
+
+bot.onText(/\/dime cotilleos/, (msg, match) => {
+    const chatId = msg.chat.id;
+
+    // send back the matched "whatever" to the chat
+    bot.sendMessage(chatId, 'estoy siendo programado y no me pispo mucho');
+
+});
 
 // Matches "/echo [whatever]"
-bot.onText(/\/nueva_propuesta_para_programa (.+)/, (msg, match) => {
+bot.onText(/\/nueva_propuesta_para_programa/, (msg, match) => {
     const chatId = msg.chat.id;
 
     // send back the matched "whatever" to the chat

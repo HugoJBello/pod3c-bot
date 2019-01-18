@@ -1,0 +1,25 @@
+{
+  "name": "pod3c-bot",
+  "version": "1.0.0",
+  "description": "Simple template for a restify project with routes in separated files and mocha tests.",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "node-telegram-bot-api": "^0.30.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoJBello/pod3c-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HugoJBello/pod3c-bot/issues"
+  },
+  "homepage": "https://github.com/HugoJBello/pod3c-bot#readme"
+}

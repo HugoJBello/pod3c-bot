@@ -8,8 +8,9 @@ module.exports = (bot) => {
                          setInterval(async () => {
                                  for (const chatId of chatsId){
                                          if(chatId) bot.sendMessage(chatId, resp);
+                                         console.log("--");
                                  }
-                         }, 1);
+                         }, 5000);
                  }
 
         });

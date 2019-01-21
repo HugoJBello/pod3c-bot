@@ -1,20 +1,7 @@
-
+const ChatDao = require('../ChatDAO');
 module.exports = (bot) => {
-
-// Matches "/echo [whatever]"
-    bot.onText(/\/echo (.+)/, (msg, match) => {
-        // 'msg' is the received Message from Telegram
-        // 'match' is the result of executing the regexp above on the text content
-        // of the message
-
-        const chatId = msg.chat.id;
-        const resp = match[1]; // the captured "whatever"
-
-        // send back the matched "whatever" to the chat
-        bot.sendMessage(chatId, resp);
-    });
-
-// Matches "/echo [whatever]"
+    const chatDao = new ChatDao();
+   // Matches "/echo [whatever]"
     bot.onText(/\/info/, (msg, match) => {
         const chatId = msg.chat.id;
 
@@ -23,8 +10,8 @@ module.exports = (bot) => {
                 reply_markup: {
                     keyboard: [['Hablame del programa'], ['dime cotilleos']]
                 }
-            }
-        );
+            });
+        chatDao.recordUserChat(chatId, "");
     });
     bot.onText(/\/Hablame del programa/, (msg, match) => {
         const chatId = msg.chat.id;

@@ -4,7 +4,9 @@
   "description": "Simple template for a restify project with routes in separated files and mocha tests.",
   "main": "index.js",
   "dependencies": {
+    "bluebird": "^3.5.3",
     "dotenv": "^6.2.0",
+    "mongoose": "^5.4.5",
     "node-telegram-bot-api": "^0.30.0"
   },
   "devDependencies": {},

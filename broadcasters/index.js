@@ -1,5 +1,5 @@
-const broadcaster = require('./broadcasterTest');
+//const broadcaster = require('./broadcasterTest');
 
 module.exports = (bot) => {
-    broadcaster(bot);
+    //broadcaster(bot);
 };

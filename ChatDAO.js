@@ -5,7 +5,7 @@ module.exports = class ChatDAO {
 
     recordUserChat(chatId, userName){
         const data = {_id: chatId, chatId:chatId, userName:userName};
-        User.update({_id: "" + chatId}, data, {upsert: true}, (err) => {console.log(err);});
+        User.update({chatId: "" + chatId}, data, {upsert: true}, (err) => {console.log(err);});
     }
     getAllChatIds(){
         return new Promise ((resolve,reject) => {
